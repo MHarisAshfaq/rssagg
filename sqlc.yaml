@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    schema: "sql/schema"
+    queries: "sql/queries"
+    database:
+      uri: "postgres://postgres:newpassword@localhost:5432/rssagg?sslmode=disable"
+    gen:
+      go:
+        out: "internal/database"
